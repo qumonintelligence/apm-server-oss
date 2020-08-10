@@ -529,7 +529,7 @@ output.elasticsearch:
   # Scheme and port can be left out and will be set to the default (`http` and `9200`).
   # In case you specify and additional path, the scheme is required: `http://localhost:9200/path`.
   # IPv6 addresses should always be defined as: `https://[2001:db8::1]:9200`.
-  hosts: ["elasticsearch:9200"]
+  hosts: ["http://localhost:9200"]
 
   # Boolean flag to enable or disable the output module.
   #enabled: true
@@ -671,28 +671,6 @@ output.elasticsearch:
   # Configure what types of renegotiation are supported. Valid options are
   # never, once, and freely. Default is never.
   #ssl.renegotiation: never
-
-  # Enable Kerberos support. Kerberos is automatically enabled if any Kerberos setting is set.
-  #kerberos.enabled: true
-
-  # Authentication type to use with Kerberos. Available options: keytab, password.
-  #kerberos.auth_type: password
-
-  # Path to the keytab file. It is used when auth_type is set to keytab.
-  #kerberos.keytab: /etc/elastic.keytab
-
-  # Path to the Kerberos configuration.
-  #kerberos.config_path: /etc/krb5.conf
-
-  # Name of the Kerberos user.
-  #kerberos.username: elastic
-
-  # Password of the Kerberos user. It is used when auth_type is set to password.
-  #kerberos.password: changeme
-
-  # Kerberos realm.
-  #kerberos.realm: ELASTIC
-
 
 #----------------------------- Console output -----------------------------
 #output.console:
@@ -948,27 +926,6 @@ output.elasticsearch:
   # never, once, and freely. Default is never.
   #ssl.renegotiation: never
 
-  # Authentication type to use with Kerberos. Available options: keytab, password.
-  #kerberos.auth_type: password
-
-  # Path to the keytab file. It is used when auth_type is set to keytab.
-  #kerberos.keytab: /etc/krb5kdc/kafka.keytab
-
-  # Path to the Kerberos configuration.
-  #kerberos.config_path: /etc/path/config
-
-  # The service principal name.
-  #kerberos.service_name: HTTP/my-service@realm
-
-  # Name of the Kerberos user. It is used when auth_type is set to password.
-  #kerberos.username: elastic
-
-  # Password of the Kerberos user. It is used when auth_type is set to password.
-  #kerberos.password: changeme
-
-  # Kerberos realm.
-  #kerberos.realm: ELASTIC
-
 #================================= Paths ==================================
 
 # The home path for the apm-server installation. This is the default base path
@@ -1051,12 +1008,6 @@ output.elasticsearch:
 
 # Set to true to log messages in json format.
 #logging.json: false
-
-# Set to true to log with minimal Elastic Common Schema (ECS) fields set.
-# It is recommended to set `logging.json=true` when enabling ECS logging.
-# Defaults to false.
-#logging.ecs: false
-
 
 #=============================== HTTP Endpoint ===============================
 
@@ -1178,27 +1129,6 @@ output.elasticsearch:
   # Configure what types of renegotiation are supported. Valid options are
   # never, once, and freely. Default is never.
   #ssl.renegotiation: never
-
-  # Enable Kerberos support. Kerberos is automatically enabled if any Kerberos setting is set.
-  #kerberos.enabled: true
-
-  # Authentication type to use with Kerberos. Available options: keytab, password.
-  #kerberos.auth_type: password
-
-  # Path to the keytab file. It is used when auth_type is set to keytab.
-  #kerberos.keytab: /etc/elastic.keytab
-
-  # Path to the Kerberos configuration.
-  #kerberos.config_path: /etc/krb5.conf
-
-  # Name of the Kerberos user.
-  #kerberos.username: elastic
-
-  # Password of the Kerberos user. It is used when auth_type is set to password.
-  #kerberos.password: changeme
-
-  # Kerberos realm.
-  #kerberos.realm: ELASTIC
 
   #metrics.period: 10s
   #state.period: 1m
